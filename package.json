@@ -28,6 +28,8 @@
     "rimraf": "^2.6.3"
   },
   "dependencies": {
+    "font-awesome": "^4.7.0",
+    "normalize.scss": "^0.1.0",
     "pug": "^2.0.3"
   }
 }

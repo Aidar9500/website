@@ -1,0 +1,24 @@
+header.header
+    .header__top
+        .container
+            .contacts
+                a.contact(href='tel:+8927934959')
+                    i.fa.fa-mobile(aria-hidden='true')
+                    span.contact__text 89279349959
+
+                a.contact(href='mailto:aidar9500@gmai.com')
+                    i.fa.fa-envelope(aria-hidden='true')
+                    span.contact__text aidar9500@gmail.com
+                a.facebook-icon(href='facebook.com')
+    .container
+        .header__bottom
+
+            .logo: img.logo__picture(src='images/logo.png' alt="picture")
+            nav.nav
+            - var items = ['Обо мне', 'Резюме', 'Фото', 'Котакты']
+              each item in items
+                  if item === 'Обо мне'
+                    a.nav__link.nav__active(href="#")= item
+                  else
+                    a.nav__link(href="#")= item
+            a.button.header__button.button--red(href="#") Бесплатная консультация
