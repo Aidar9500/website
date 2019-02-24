@@ -1,0 +1,7 @@
+nav.nav
+    - var items = ['Обо мне', 'Резюме', 'Фото', 'Котакты']
+    each item in items
+        if item === 'Обо мне'
+            a.nav__link.nav--active(href="#")= item
+        else
+            a.nav__link(href="#")= item

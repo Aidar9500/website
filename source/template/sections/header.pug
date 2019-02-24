@@ -3,22 +3,18 @@ header.header
         .container
             .contacts
                 a.contact(href='tel:+8927934959')
-                    i.fa.fa-mobile(aria-hidden='true')
+                    i.fa.fa-mobile.contact__icon(aria-hidden='true')
                     span.contact__text 89279349959
 
                 a.contact(href='mailto:aidar9500@gmai.com')
-                    i.fa.fa-envelope(aria-hidden='true')
+                    i.fa.fa-envelope.contact__icon--mail(aria-hidden='true')
                     span.contact__text aidar9500@gmail.com
-                a.facebook-icon(href='facebook.com')
+                a.contact(href='facebook.com')
+                    i.fa.fa-facebook-square.contact__icon--facebook(aria-hidden="true")
+                    span.contact__text
     .container
         .header__bottom
 
             .logo: img.logo__picture(src='images/logo.png' alt="picture")
-            nav.nav
-            - var items = ['Обо мне', 'Резюме', 'Фото', 'Котакты']
-              each item in items
-                  if item === 'Обо мне'
-                    a.nav__link.nav__active(href="#")= item
-                  else
-                    a.nav__link(href="#")= item
+            include nav.pug
             a.button.header__button.button--red(href="#") Бесплатная консультация
