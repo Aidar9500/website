@@ -3,6 +3,11 @@
   vertical-align: top;
   padding-top: 7px;
   margin-right: 15px;
+  @media(min-width:1000px){
+    margin-right: 0;
+    margin-bottom: 15px;
+
+}
   &__link{
     display: inline-block;
     vertical-align: top;
@@ -12,22 +17,39 @@
     text-transform: capitalize;
     color: #424242;
     transition: .3s;
+    @media (max-width:600px){
+      display: block;
+      text-align: center;
+      &:after{
+        display: none;
+      }
+    }
     &:hover,
     &--active{
       color: #de2b24;
     }
-    &::after{
+    &::after {
       content: "";
-      display:inline-block;
+      display: inline-block;
       vertical-align: middle;
       width: 5px;
       height: 5px;
       margin-left: 15px;
       border-radius: 50%;
       background: #424242;
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+    &:last-child{
+      @media(max-width:600px){
+        margin-bottom: 30px;
+
+      }
     }
     &:last-child::after{
       display: none;
+
     }
   }
 
